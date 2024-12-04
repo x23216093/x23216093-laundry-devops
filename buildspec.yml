@@ -6,7 +6,6 @@ phases:
       php: 8.3
     commands:
       - echo Installing dependencies
-      - composer install --no-dev --optimize-autoloader
   pre_build:
     commands:
       - echo Pre-build stage complete

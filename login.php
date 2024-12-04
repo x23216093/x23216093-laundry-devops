@@ -73,6 +73,7 @@ header("location:index.php?page=home");
   		<div id="login-right">
   			<div class="card col-md-8">
   				<div class="card-body">
+  				<centre><h3>Administrator - Login</h3></centre>
   					<form id="login-form" >
   						<div class="form-group">
   							<label for="username" class="control-label">Username</label>
