@@ -3,24 +3,22 @@ version : 0.2
 phases:
   install:
     runtime-versions:
-      php: 7.4
+      php: 8.3
     commands:
       - echo Installing dependencies
-      - composer install # Assuming you're using Composer for dependency management
+      - composer install --no-dev --optimize-autoloader
   pre_build:
     commands:
-      - echo Running pre-build steps
-      - composer run-script pre-build
+      - echo Pre-build stage complete
 
   build:
     commands:
-      - echo Building the application
+      - echo Build stage complete
 
   post_build:
     commands:
-      - echo Running post-build steps
-      - composer run-script post-build # if you have scripts defined
-
+      - echo Post-build stage complete
+      - echo Deploying to Elastic Beanstalk...
 artifacts:
   files:
     - '**/*'
